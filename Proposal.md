@@ -33,7 +33,7 @@ We will also augment our dataset with [national park location data](https://www.
 
 # Sketches and Data Analysis
 
-# Data Processing. 
+# Data Processing
 ## Do you have to do substantial data cleanup? 
 We have chosen to integrate four distinct datasets: national park visitation data, biodiversity records, species found in national parks, and weather data. While the national park datasets are well-structured and require no cleanup, the species dataset contains some missing data that needs to be addressed. To address this, columns with more than 50% missing data are dropped. For columns where less than 30% of the data is missing, rows containing NaN values are removed.
 
@@ -55,7 +55,7 @@ Finally, we aim to explore clustering approaches and other data analysis techniq
 
 ## Show some screenshots of your data to demonstrate you have explored it.
 
-We have explored the data across different features and dimensions to extract patterns from  the chosen datasets. We have used different kinds of visualization techniques such as bar graphs, histograms, correlation heatmap and stacked charts to show different characteristics of the data. Our notebook for the EDA process can be found on this link (https://colab.research.google.com/drive/1uw3pGpQa-vOHGurr1G2bDpO5_9lOPUYr?usp=sharing). Let’s take a look at a few examples:
+We have explored the data across different features and dimensions to extract patterns from  the chosen datasets. We have used different kinds of visualization techniques such as bar graphs, histograms, correlation heatmap and stacked charts to show different characteristics of the data. Our notebook for the EDA process can be found on this [link] (https://colab.research.google.com/drive/1uw3pGpQa-vOHGurr1G2bDpO5_9lOPUYr?usp=sharing). Let’s take a look at a few examples:
 
 <p align="left">
   <img src="images/parks_by_region_count.png" alt="Count of parks per region"/>
