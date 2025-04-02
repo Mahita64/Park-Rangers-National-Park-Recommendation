@@ -55,7 +55,7 @@ Finally, we aim to explore clustering approaches and other data analysis techniq
 
 ## Show some screenshots of your data to demonstrate you have explored it.
 
-We have explored the data across different features and dimensions to extract patterns from  the chosen datasets. We have used different kinds of visualization techniques such as bar graphs, histograms, correlation heatmap and stacked charts to show different characteristics of the data. Our notebook for the EDA process can be found on this [link] (https://colab.research.google.com/drive/1uw3pGpQa-vOHGurr1G2bDpO5_9lOPUYr?usp=sharing). Let’s take a look at a few examples:
+We have explored the data across different features and dimensions to extract patterns from  the chosen datasets. We have used different kinds of visualization techniques such as bar graphs, histograms, correlation heatmap and stacked charts to show different characteristics of the data. Our notebook for the EDA process can be found on this [link](https://colab.research.google.com/drive/1uw3pGpQa-vOHGurr1G2bDpO5_9lOPUYr?usp=sharing). Let’s take a look at a few examples:
 
 <p align="left">
   <img src="images/parks_by_region_count.png" alt="Count of parks per region"/>
