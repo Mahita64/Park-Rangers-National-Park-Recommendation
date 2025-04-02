@@ -51,42 +51,56 @@ We have explored the data across different features and dimensions to extract pa
   <img src="images/parks_by_region_count.png" alt="Count of parks per region"/>
   <br>
   <strong>Count of parks per region</strong>
+  <br>
+  <br>
 </p>
 
 <p align="left">
   <img src="images/total_visits_per_park.png" alt="Total number of visits per park on the map from 1979 to 2023"/>
   <br>
   <strong>Total number of visits per park on the map from 1979 to 2023</strong>
+  <br>
+  <br>
 </p>
 
 <p align="left">
   <img src="images/visits_per_month.png" alt="Visits per month"/>
   <br>
   <strong>Visits per month</strong>
+  <br>
+  <br>
 </p>
 
 <p align="left">
   <img src="images/heatmap.png" alt="Correlations between visits, campers and park size"/>
   <br>
   <strong>Correlations between visits, campers and park size</strong>
+  <br>
+  <br>
 </p>
 
 <p align="left">
   <img src="images/total_visitors_per_month.png" alt="Total visitors per month per region of national park based on geography"/>
   <br>
   <strong>Total visitors per month per region of national park based on geography</strong>
+  <br>
+  <br>
 </p>
 
 <p align="left">
   <img src="images/total_visits_by_state.png" alt="Visits by state"/>
   <br>
   <strong>Visits by state</strong>
+  <br>
+  <br>
 </p>
 
 <p align="left">
   <img src="images/diversity.png" alt="Diversity of national parks per region"/>
   <br>
   <strong>Diversity of national parks per region</strong>
+  <br>
+  <br>
 </p>
 
 <!-- ![Parks by region count](images/parks_by_region_count.png) -->
