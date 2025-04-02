@@ -30,6 +30,18 @@ To serve our purpose of recommending national parks to visit based on location a
 
 We will also augment our dataset with [national park location data](https://www.kaggle.com/datasets/aliamini587/biodiversity-in-national-parks) to enable geospatial analysis, and data related to [park biodiversity](https://www.kaggle.com/datasets/nationalparkservice/park-biodiversity?select=species.csv) for richer visualizations. 
 
+## Objectives
+1. Understand the distribution of visitation numbers across different national parks in the United States.
+2. Enable interactive visualizations such as maps, bar charts, heatmaps, etc to explore different aspects of these parks.
+3. Identify key contributors to a park’s popularity and seasonality
+4. Study the impact of ecological and geographic factors on park visitation
+5. Examine the impact of climate and weather changes on park visitation.
+
+## Questions
+We want to use these insights to answer the following questions -
+1. How can we group together similar parks, so that we promote awareness and increase visitation based on special features?
+2. Based on a few user inputs, such as the state in which they are looking, and the geographical features they are willing to explore, which would be a good park for them to visit? (Sort of an interactive dashboard for the user to find their next travel destination)
+3. How can park officials better anticipate and plan for increased visitation numbers during specific times of the year?
 
 # Sketches and Data Analysis
 
@@ -49,9 +61,12 @@ Correlations between visits, campers and park size
 6. Diversity of national parks per region: We also want to understand how the flora and fauna of a park affects visitation numbers. We are augmenting with the species dataset for this purpose, and we collect high-level occurrence counts of several species from it.
 
 ## How will data processing be implemented?  
-Data processing can be implemented in various ways. Firstly, we will start with data cleaning in which we will handle empty values by removing them based on need or performing imputation. We will then standardize the format for columns like date to allow more understanding. We can also normalize categorical data as well as remove duplicates and irrelevant entries if any. Next step would be data transformation which would involve merging datasets like the national park dataset with the weather as well as the species and biodiversity data. Further we can look into the feature engineering process to understand which features can be used to solve our problem statement. We want to add a new feature “distance to the airport” to help with accessibility for all our users.
+Data processing can be implemented in various ways. First, we start with data cleaning in which we will handle empty values by removing them based on need or performing imputation. We will then standardize the format for columns like date to allow more understanding. We can also normalize categorical data as well as remove duplicates and irrelevant entries if any. Next step would be data transformation which would involve merging datasets like the national park dataset with the weather as well as the species and biodiversity data. Further we can look into the feature engineering process to understand which features can be used to solve our problem statement. We want to add a new feature “distance to the airport” to help with accessibility for all our users.
 
-Finally, we aim to explore clustering approaches and other data analysis techniques to interpret the data. Our goal is to develop a basic national park recommendation system based on user preferences by identifying key factors influencing visitation trends and weather patterns.
+Additionally, for the weather dataset, while there are no integrity issues, there is simply too much data (since there are multiple weather stations in the dataset). Hence, it is becoming computationally restrictive to first find the nearest station to each national park, and then merge the data. Therefore, we need some additional processing to identify only relevant entries in the weather dataset.
+
+Finally, we aim to explore clustering approaches and other data analysis techniques to interpret the data. Our goal is to develop an interactive national park exploration system for users to find a national park that matches their preferences. We do this by identifying key factors influencing visitation trends and weather patterns, and consolidate it for the user.
+
 
 ## Show some screenshots of your data to demonstrate you have explored it.
 
