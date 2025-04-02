@@ -107,5 +107,37 @@ We have explored the data across different features and dimensions to extract pa
 
 
 # System Design. 
-1. How will you display your data? What types of interactions will you support? 
-2. Provide some sketches that you have for the system design.
+## How will you display your data? 
+To display the data effectively, we will display the data in multiple formats . The main page (Top Parks page from the Survey.png) will feature a survey where users answer a series of questions about their travel preferences. Based on their responses, the system will generate a list of 5-6 recommended national parks, each presented as an info card containing key details such as park location, best visit seasons, popular activities, and flora/fauna information. These recommendations will help users quickly identify parks that suit their needs and make informed travel decisions.
+  
+  In addition to the national park info cards, we will also display data in the form of interactive visualizations as a part of Explore pages. This will include a maps page and additional data visualization page, allowing users to browse and filter national park data on their own. The exploration pages will provide interactive visualizations and dynamic filtering options, enabling users to refine their search based on factors like months/year, number of visitors, types or parks, etc. 
+
+## What types of interactions will you support?
+Our system will support two main interaction modes. First, users can receive personalized recommendations by interacting with the system through a questionnaire designed to understand their travel preferences. This questionnaire would become the basis of our Machine Learning Recommendation model which would make it easy for the users to find suitable parks without extensive searching. 
+
+  Second, users can take a more hands-on approach by exploring and interacting with the dataset through maps and filters available in the exploration and maps pages. These pages would allow them to customize their search criteria according to their specific interests and visualize the data about the National Parks in a clear and concise manner. By offering these two modes, our system would ensure that users can either get quick, curated recommendations or explore the data in a more interactive and personalized way.
+  
+## Provide some sketches that you have for the system design.
+<p align="left">
+  <img src="images/Survey.png" alt="Questionnaire Presented to Users For Recommendations"/>
+  <br>
+  <strong>Questionnaire Presented to Users For Recommendations</strong>
+  <br>
+  <br>
+</p>
+
+<p align="left">
+  <img src="images/Recommendations.png" alt="The Recommendations Based on User Responses"/>
+  <br>
+  <strong>The Recommendations Based on User Responses</strong>
+  <br>
+  <br>
+</p>
+
+<p align="left">
+  <img src="images/Maps.png" alt="Data Visulizations with Filters For More Personalized Searches"/>
+  <br>
+  <strong>Data Visulizations with Filters For More Personalized Searches</strong>
+  <br>
+  <br>
+</p>
