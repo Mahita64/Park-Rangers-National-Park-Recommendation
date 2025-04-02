@@ -29,3 +29,25 @@ We plan to use the [U.S. National Park Visit Data (1979-2023)](https://www.respo
 To serve our purpose of recommending national parks to visit based on location and season, we plan to augment our data with [weather information](https://www.ncei.noaa.gov/cdo-web/datasets) to enable weather-based analysis and modelling. For example, some national parks may be more popular than others in the winter. Moreover, incorporating weather information will provide insights on how climate change has affected visitation numbers. 
 
 We will also augment our dataset with [national park location data](https://www.kaggle.com/datasets/aliamini587/biodiversity-in-national-parks) to enable geospatial analysis, and data related to [park biodiversity](https://www.kaggle.com/datasets/nationalparkservice/park-biodiversity?select=species.csv) for richer visualizations. 
+
+
+## Sketches and Data Analysis
+
+# Data Processing. 
+1. Do you have to do substantial data cleanup? 
+Ans: We have not done any substantial 
+
+
+2. What quantities do you plan to derive from your data? 
+Ans: 
+
+3. How will data processing be implemented?  
+
+4. Show some screenshots of your data to demonstrate you have explored it.
+
+![Parks by region count](images/parks_by_region_count.png)
+
+
+# System Design. 
+1. How will you display your data? What types of interactions will you support? 
+2. Provide some sketches that you have for the system design.
