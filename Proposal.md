@@ -45,7 +45,15 @@ Ans:
 
 4. Show some screenshots of your data to demonstrate you have explored it.
 
-![Parks by region count](images/parks_by_region_count.png)
+We have explored the data across different features and dimensions to extract patterns from  the chosen datasets. We have used different kinds of visualization techniques such as bar graphs, histograms, correlation heatmap and stacked charts to show different characteristics of the data. Let’s take a look at a few examples:
+
+<p align="center">
+  <img src="images/parks_by_region_count.png" alt="Parks by region count"/>
+  <br>
+  <strong>Parks by region count</strong>
+</p>
+
+<!-- ![Parks by region count](images/parks_by_region_count.png) -->
 
 
 # System Design. 
