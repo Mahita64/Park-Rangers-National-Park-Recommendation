@@ -31,21 +31,31 @@ To serve our purpose of recommending national parks to visit based on location a
 We will also augment our dataset with [national park location data](https://www.kaggle.com/datasets/aliamini587/biodiversity-in-national-parks) to enable geospatial analysis, and data related to [park biodiversity](https://www.kaggle.com/datasets/nationalparkservice/park-biodiversity?select=species.csv) for richer visualizations. 
 
 
-## Sketches and Data Analysis
+# Sketches and Data Analysis
 
-### Data Processing. 
-1. Do you have to do substantial data cleanup? 
-Ans: We have not done any substantial 
+# Data Processing. 
+## Do you have to do substantial data cleanup? 
+We have chosen to integrate four distinct datasets: national park visitation data, biodiversity records, species found in national parks, and weather data. While the national park datasets are well-structured and require no cleanup, the species dataset contains some missing data that needs to be addressed. To address this, columns with more than 50% missing data are dropped. For columns where less than 30% of the data is missing, rows containing NaN values are removed.
 
+## What quantities do you plan to derive from your data? 
+We plan to collect high-level statistics about national parks, which can help us identify how the park biodiversity, weather and time of the year affect park visitation. This will allow us to cluster similar parks,  determine the best season to visit each park, and help park officials anticipate visitation numbers.
+Some of them quantities are - 
+1. Count of parks per US region: This quantity will help us identify the concentration of parks across US regions to uncover natural hotspots.
+2. Total visitation numbers per park from 1979 to 2023: This quantity allows us to identify the overall most popular parks. We can then use this information to study characteristics contributing to this popularity.
+3. Total visitation per park per month: This quantity will allow us to analyse seasonal trends, that is, how the visitation numbers change within a year. For example, we would expect high visitation for most parks during the summer months.
+Correlations between visits, campers and park size
+4. Every park receives multiple types of visits: be it recreational visits, camping trips, and non-recreational trips. We would like to know how the park size affects which visit type is predominant.
+5. Number of visits for each geography: Another important factor is how the park geography affects visitation and popularity. To aid this, we plan to collect data concerning visitation numbers for each geography (for example, colder areas like Alaska vs intermountain ranges like the Rockies).
+6. Diversity of national parks per region: We also want to understand how the flora and fauna of a park affects visitation numbers. We are augmenting with the species dataset for this purpose, and we collect high-level occurrence counts of several species from it.
 
-2. What quantities do you plan to derive from your data? 
-Ans: 
+## How will data processing be implemented?  
+Data processing can be implemented in various ways. Firstly, we will start with data cleaning in which we will handle empty values by removing them based on need or performing imputation. We will then standardize the format for columns like date to allow more understanding. We can also normalize categorical data as well as remove duplicates and irrelevant entries if any. Next step would be data transformation which would involve merging datasets like the national park dataset with the weather as well as the species and biodiversity data. Further we can look into the feature engineering process to understand which features can be used to solve our problem statement. We want to add a new feature “distance to the airport” to help with accessibility for all our users.
 
-3. How will data processing be implemented?  
+Finally, we aim to explore clustering approaches and other data analysis techniques to interpret the data. Our goal is to develop a basic national park recommendation system based on user preferences by identifying key factors influencing visitation trends and weather patterns.
 
-4. Show some screenshots of your data to demonstrate you have explored it.
+## Show some screenshots of your data to demonstrate you have explored it.
 
-We have explored the data across different features and dimensions to extract patterns from  the chosen datasets. We have used different kinds of visualization techniques such as bar graphs, histograms, correlation heatmap and stacked charts to show different characteristics of the data. Let’s take a look at a few examples:
+We have explored the data across different features and dimensions to extract patterns from  the chosen datasets. We have used different kinds of visualization techniques such as bar graphs, histograms, correlation heatmap and stacked charts to show different characteristics of the data. Our notebook for the EDA process can be found on this link (https://colab.research.google.com/drive/1uw3pGpQa-vOHGurr1G2bDpO5_9lOPUYr?usp=sharing). Let’s take a look at a few examples:
 
 <p align="left">
   <img src="images/parks_by_region_count.png" alt="Count of parks per region"/>
@@ -58,7 +68,7 @@ We have explored the data across different features and dimensions to extract pa
 <p align="left">
   <img src="images/total_visits_per_park.png" alt="Total number of visits per park on the map from 1979 to 2023"/>
   <br>
-  <strong>Total number of visits per park on the map from 1979 to 2023</strong>
+  <strong>Diversity of national parks per region</strong>
   <br>
   <br>
 </p>
@@ -98,7 +108,7 @@ We have explored the data across different features and dimensions to extract pa
 <p align="left">
   <img src="images/diversity.png" alt="Diversity of national parks per region"/>
   <br>
-  <strong>Diversity of national parks per region</strong>
+  <strong>Total number of visits per park on the map from 1979 to 2023</strong>
   <br>
   <br>
 </p>
@@ -106,7 +116,7 @@ We have explored the data across different features and dimensions to extract pa
 <!-- ![Parks by region count](images/parks_by_region_count.png) -->
 
 
-# System Design. 
+# System Design
 ## How will you display your data? 
 To display the data effectively, we will display the data in multiple formats . The main page (Top Parks page from the Survey.png) will feature a survey where users answer a series of questions about their travel preferences. Based on their responses, the system will generate a list of 5-6 recommended national parks, each presented as an info card containing key details such as park location, best visit seasons, popular activities, and flora/fauna information. These recommendations will help users quickly identify parks that suit their needs and make informed travel decisions.
   
