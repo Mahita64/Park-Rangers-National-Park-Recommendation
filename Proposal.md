@@ -48,9 +48,45 @@ Ans:
 We have explored the data across different features and dimensions to extract patterns from  the chosen datasets. We have used different kinds of visualization techniques such as bar graphs, histograms, correlation heatmap and stacked charts to show different characteristics of the data. Let’s take a look at a few examples:
 
 <p align="center">
-  <img src="images/parks_by_region_count.png" alt="Parks by region count"/>
+  <img src="images/parks_by_region_count.png" alt="Count of parks per region"/>
   <br>
-  <strong>Parks by region count</strong>
+  <strong>Count of parks per region</strong>
+</p>
+
+<p align="center">
+  <img src="images/total_visits_per_park.png" alt="Total number of visits per park on the map from 1979 to 2023"/>
+  <br>
+  <strong>Total number of visits per park on the map from 1979 to 2023</strong>
+</p>
+
+<p align="center">
+  <img src="images/visits_per_month.png" alt="Visits per month"/>
+  <br>
+  <strong>Visits per month</strong>
+</p>
+
+<p align="center">
+  <img src="images/heatmap.png" alt="Correlations between visits, campers and park size"/>
+  <br>
+  <strong>Correlations between visits, campers and park size</strong>
+</p>
+
+<p align="center">
+  <img src="images/total_visitors_per_month.png" alt="Total visitors per month per region of national park based on geography"/>
+  <br>
+  <strong>Total visitors per month per region of national park based on geography</strong>
+</p>
+
+<p align="center">
+  <img src="images/total_visits_by_state.png" alt="Visits by state"/>
+  <br>
+  <strong>Visits by staten</strong>
+</p>
+
+<p align="center">
+  <img src="images/diversity.png" alt="Diversity of national parks per region"/>
+  <br>
+  <strong>Diversity of national parks per region</strong>
 </p>
 
 <!-- ![Parks by region count](images/parks_by_region_count.png) -->
