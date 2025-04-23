@@ -1,0 +1,57 @@
+Park Code,Park Name,State,Acres,Latitude,Longitude,nearest_airport_name,airport_lat,airport_lon,airport_state,distance_km
+ACAD,Acadia National Park,ME,47390,44.35,-68.21,Bangor International Airport,44.80744,-68.82814,ME,70.6
+ARCH,Arches National Park,UT,76519,38.68,-109.57,Canyonlands Field,38.75496,-109.75484,UT,18.07
+BADL,Badlands National Park,SD,242756,43.75,-102.5,Rapid City Regional Airport,44.04532,-103.05737,SD,55.43
+BIBE,Big Bend National Park,TX,801163,29.25,-103.25,Midland International Airport,31.94253,-102.20191,TX,315.75
+BISC,Biscayne National Park,FL,172924,25.65,-80.08,Miami International Airport,25.79325,-80.29056,FL,26.43
+BLCA,Black Canyon of the Gunnison National Park,CO,32950,38.57,-107.72,Montrose Regional Airport,38.50887,-107.89383,CO,16.58
+BRCA,Bryce Canyon National Park,UT,35835,37.57,-112.18,Cedar City Regional Airport,37.70097,-113.09858,UT,82.19
+CANY,Canyonlands National Park,UT,337598,38.2,-109.93,Canyonlands Field,38.75496,-109.75484,UT,63.56
+CARE,Capitol Reef National Park,UT,241904,38.2,-111.17,Canyonlands Field,38.75496,-109.75484,UT,137.78
+CAVE,Carlsbad Caverns National Park,NM,46766,32.17,-104.44,Roswell International Air Center,33.30156,-104.53056,NM,126.11
+CHIS,Channel Islands National Park,CA,249561,34.01,-119.42,Santa Barbara Municipal Airport (Santa Barbara Airport),34.42621,-119.84037,CA,60.3
+CONG,Congaree National Park,SC,26546,33.78,-80.78,Columbia Metropolitan Airport,33.93884,-81.11954,SC,35.98
+CRLA,Crater Lake National Park,OR,183224,42.94,-122.1,Rogue Valley International Airport,42.37423,-122.8735,OR,89.21
+CUVA,Cuyahoga Valley National Park,OH,32950,41.24,-81.55,Cleveland Hopkins International Airport,41.41089,-81.8494,OH,31.4
+DENA,Denali National Park and Preserve,AK,3372402,63.33,-150.5,Fairbanks International Airport,64.81368,-147.85967,AK,209
+DEVA,Death Valley National Park,"CA, NV",4740912,36.24,-116.82,McCarran International Airport,36.08036,-115.15233,NV,150.76
+DRTO,Dry Tortugas National Park,FL,64701,24.63,-82.87,Key West International Airport,24.55611,-81.75956,FL,112.57
+EVER,Everglades National Park,FL,1508538,25.32,-80.93,Miami International Airport,25.79325,-80.29056,FL,82.97
+GAAR,Gates Of The Arctic National Park and Preserve,AK,7523898,67.78,-153.3,Deadhorse Airport (Prudhoe Bay Airport),70.19476,-148.46516,AK,330.34
+GLAC,Glacier National Park,MT,1013572,48.8,-114,Glacier Park International Airport,48.3114,-114.25507,MT,57.48
+GLBA,Glacier Bay National Park and Preserve,AK,3224840,58.5,-137,Gustavus Airport,58.42438,-135.70738,AK,75.65
+GRBA,Great Basin National Park,NV,77180,38.98,-114.3,Cedar City Regional Airport,37.70097,-113.09858,UT,176.65
+GRCA,Grand Canyon National Park,AZ,1217403,36.06,-112.14,Flagstaff Pulliam Airport,35.13845,-111.67122,AZ,110.89
+GRSA,Great Sand Dunes National Park and Preserve,CO,42984,37.73,-105.51,Pueblo Memorial Airport,38.28909,-104.49657,CO,108.39
+GRSM,Great Smoky Mountains National Park,"TN, NC",521490,35.68,-83.53,McGhee Tyson Airport,35.81249,-83.99286,TN,44.29
+GRTE,Grand Teton National Park,WY,309995,43.73,-110.8,Jackson Hole Airport,43.60732,-110.73774,WY,14.53
+GUMO,Guadalupe Mountains National Park,TX,86416,31.92,-104.87,El Paso International Airport,31.80667,-106.37781,TX,142.95
+HALE,Haleakala National Park,HI,29094,20.72,-156.17,Kahului Airport,20.89865,-156.43046,HI,33.58
+HAVO,Hawaii Volcanoes National Park,HI,323431,19.38,-155.2,Hilo International Airport,19.72026,-155.04847,HI,41.03
+HOSP,Hot Springs National Park,AR,5550,34.51,-93.05,Bill and Hillary Clinton National Airport (Adams Field),34.7294,-92.22425,AR,79.4
+ISRO,Isle Royale National Park,MI,571790,48.1,-88.55,Houghton County Memorial Airport,47.16842,-88.48906,MI,103.69
+JOTR,Joshua Tree National Park,CA,789745,33.79,-115.9,Palm Springs International Airport,33.82922,-116.50625,CA,56.18
+KATM,Katmai National Park and Preserve,AK,3674530,58.5,-155,King Salmon Airport,58.6768,-156.64922,AK,97.58
+KEFJ,Kenai Fjords National Park,AK,669983,59.92,-149.65,Ted Stevens Anchorage International Airport,61.17432,-149.99619,AK,140.75
+KOVA,Kobuk Valley National Park,AK,1750717,67.55,-159.28,Ralph Wien Memorial Airport,66.88468,-162.59855,AK,160.88
+LACL,Lake Clark National Park and Preserve,AK,2619733,60.97,-153.42,Ted Stevens Anchorage International Airport,61.17432,-149.99619,AK,185.53
+LAVO,Lassen Volcanic National Park,CA,106372,40.49,-121.51,Redding Municipal Airport,40.50898,-122.2934,CA,66.27
+MACA,Mammoth Cave National Park,KY,52830,37.18,-86.1,Louisville International Airport (Standiford Field),38.17439,-85.736,KY,115.12
+MEVE,Mesa Verde National Park,CO,52122,37.18,-108.49,Durango-La Plata County Airport,37.15152,-107.75377,CO,65.31
+MORA,Mount Rainier National Park,WA,235625,46.85,-121.75,Seattle-Tacoma International Airport,47.44898,-122.30931,WA,78.9
+NOCA,North Cascades National Park,WA,504781,48.7,-121.2,Bellingham International Airport,48.79275,-122.53753,WA,98.61
+OLYM,Olympic National Park,WA,922651,47.97,-123.5,Seattle-Tacoma International Airport,47.44898,-122.30931,WA,106.27
+PEFO,Petrified Forest National Park,AZ,93533,35.07,-109.78,Flagstaff Pulliam Airport,35.13845,-111.67122,AZ,172.21
+PINN,Pinnacles National Park,CA,26606,36.48,-121.16,Monterey Regional Airport (Monterey Peninsula Airport),36.58698,-121.84295,CA,62.17
+REDW,Redwood National Park,CA,112512,41.3,-124,Arcata Airport,40.97812,-124.10862,CA,36.93
+ROMO,Rocky Mountain National Park,CO,265828,40.4,-105.58,Denver International Airport,39.85841,-104.667,CO,98.24
+SAGU,Saguaro National Park,AZ,91440,32.25,-110.5,Tucson International Airport,32.11608,-110.94103,AZ,44.1
+SEKI,Sequoia and Kings Canyon National Parks,CA,865952,36.43,-118.68,Fresno Yosemite International Airport,36.77619,-119.71814,CA,100.35
+SHEN,Shenandoah National Park,VA,199045,38.53,-78.35,Charlottesville-Albemarle Airport,38.13864,-78.45286,VA,44.43
+THRO,Theodore Roosevelt National Park,ND,70447,46.97,-103.45,Dickinson Theodore Roosevelt Regional Airport,46.79739,-102.80195,ND,52.86
+VOYA,Voyageurs National Park,MN,218200,48.5,-92.88,Falls International Airport,48.56619,-93.40307,MN,39.21
+WICA,Wind Cave National Park,SD,28295,43.57,-103.48,Rapid City Regional Airport,44.04532,-103.05737,SD,62.8
+WRST,Wrangell - St Elias National Park and Preserve,AK,8323148,61,-142,Merle K. (Mudhole) Smith Airport,60.49183,-145.47765,AK,197.21
+YELL,Yellowstone National Park,"WY, MT, ID",2219791,44.6,-110.5,Westerly State Airport,44.6884,-111.11764,MT,49.84
+YOSE,Yosemite National Park,CA,761266,37.83,-119.5,Mammoth Yosemite Airport,37.62405,-118.83777,CA,62.58
+ZION,Zion National Park,UT,146598,37.3,-113.05,Cedar City Regional Airport,37.70097,-113.09858,UT,44.79
