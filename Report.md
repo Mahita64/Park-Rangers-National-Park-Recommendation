@@ -57,7 +57,6 @@ Here are a few visualizations that our dashboard provides that can help Sam make
 
 This page allows Sam to input key preferences and characteristics he is seeking in a national park. Based on this input, our backend uses a soft-match clustering algorithm to recommend parks that closely align with his criteria, even if not an exact match—ensuring flexible, personalized suggestions.
 
-[IMAGE 2]
 <p align="left">
   <img src="images/2.png" alt="Average monthly Temperature"/>
   <br>
@@ -76,7 +75,15 @@ This page allows Sam to input key preferences and characteristics he is seeking 
 
 These visualizations help Sam identify one or more national parks that align with his preferences by providing insights into average monthly temperature trends across different times of the year. This is especially valuable for Sam, as it allows him to find parks that meet his specific climate requirements for an enjoyable trip.
 
-[IMAGE 3]
+<p align="left">
+  <img src="images/4.png"/>
+  <br>
+</p>
+
+<p align="left">
+  <img src="images/5.png"/>
+  <br>
+</p>
 
 The Explore page also enables users to discover parks through an intuitive, filter-based interface. By selecting activity preferences, desired month, and activity type, users can explore parks based on historical visitation patterns and weather data. This feature allows Sam to better understand seasonal trends and activity suitability before finalizing his travel plans.
 
