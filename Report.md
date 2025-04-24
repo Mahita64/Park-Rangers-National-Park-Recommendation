@@ -87,7 +87,10 @@ These visualizations help Sam identify one or more national parks that align wit
 
 The Explore page also enables users to discover parks through an intuitive, filter-based interface. By selecting activity preferences, desired month, and activity type, users can explore parks based on historical visitation patterns and weather data. This feature allows Sam to better understand seasonal trends and activity suitability before finalizing his travel plans.
 
-[IMAGE 4]
+<p align="left">
+  <img src="images/7.png"/>
+  <br>
+</p>
 
 Lastly, the Map page allows users to explore each national park’s visitation patterns by region and year range through an interactive map. It also highlights the nearest airport to each park, helping users like Sam plan convenient travel routes and assess accessibility when selecting their destination.
 
