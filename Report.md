@@ -47,7 +47,13 @@ Our dashboard is divided into three pages. (1) ParkRangers homepage that serves 
 
 Here are a few visualizations that our dashboard provides that can help Sam make a more informed decision. 
 
-[IMAGE 1]
+<p align="left">
+  <img src="images/1.png" alt="Personalized recommendation page"/>
+  <br>
+  <strong>Personalized recommendation page</strong>
+  <br>
+  <br>
+</p>
 
 This page allows Sam to input key preferences and characteristics he is seeking in a national park. Based on this input, our backend uses a soft-match clustering algorithm to recommend parks that closely align with his criteria, even if not an exact match—ensuring flexible, personalized suggestions.
 
