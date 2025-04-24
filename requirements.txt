@@ -1,0 +1,4 @@
+streamlit
+kagglehub
+plotly
+scikit-learn

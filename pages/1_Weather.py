@@ -7,8 +7,7 @@ import plotly.express as px
 import pydeck as pdk
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
-st.title("Weather Information")
-st.markdown("Contains interactive dashboards to support exploration of the National Parks in the United States.")
+st.title("Weather Trends")
 
 st.header("Exploring National Parks Weather")
 

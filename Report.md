@@ -2,7 +2,10 @@
 
 **Video URL**: TODO
 
-Short (~250 words) abstract of the concrete data science problem and how the solutions addresses the problem.
+US National Parks are rich areas of biodiversity conservation and tourism. However, some parks are more well-known, and receive greater visitation on average. Hence, there is a need to bridge the gap, and boost the visitation numbers of less-frequented parks. To address this, we have built an interactive Streamlit dashboard combining visitation analysis with a questionnaire-guided recommendation system. Our goals are to provide a unified portal to explore everything US National Parks-related. We facilitate park comparisons based on several metrics, enable users to easily locate nearby airports, offer weather trends and biodiversity information to aid in decision making. We also highlight overall trends to support policymakers. Lastly, we have incorporated a questionnaire-driven clustering algorithm, to help users find parks that align with their preferences.
+
+To do this, we have integrated data from several sources - national park visitation numbers, historical weather data, geospatial and airports-related information, as well as biodiversity data. We then used Altair and Plotly to present this data in an interactive and user-friendly format. We also built a simple K-Means clustering algorithm to help users find parks they will enjoy visiting. Future work includes social media sentiment analysis, dynamic clustering based on real-time weather, and incorporating socio-economic accessibility factors.
+
 
 ## Introduction
 National parks are essential for conserving the biodiversity and natural heritage of a country, while also offering recreational and educational opportunities to the general public. 
@@ -17,13 +20,14 @@ To address this, we have built an interactive dashboard that combines interactiv
 ## Related Work
 
 #### 1. Visitation Pattern Analysis
-Lacher and Brownlee studied trends in dispersion of park visitation using the Gini index (a measure of inequality derived from economics) [1]. Their work uncovered the persistent clustering among parks. Ideal conditions such as easy accessibility and pleasant weather have made a few parks like the Great Smoky Mountains disproportionately popular. Factors like accessibility and favorable weather contribute to the popularity of these parks, as also reflected in National Park Service data [Fig 1]. While this bodes well economically for communities near these popular parks, it impacts the environment negatively. At the same time, slightly remote parks remain underutilized.
+Lacher and Brownlee studied trends in dispersion of park visitation using the Gini index (a measure of inequality derived from economics) [1]. Their work uncovered the persistent clustering among parks. Ideal conditions such as easy accessibility and pleasant weather made a few parks like the Great Smoky Mountains disproportionately popular. While this bodes well economically for communities near these popular parks, it can impact the environment negatively. At the same time, the more remote parks like North Cascades remain underutilized.
+
 This work highlights the need for two efforts -
-**a)** More awareness as to why certain destinations remain underutilized, enabling policymakers to craft strategies that enhance their visibility and accessibility.
+**a)** More awareness as to why certain destinations remain underutilized, thus enabling policymakers to craft strategies that improve their visibility and accessibility.
 **b)** Directing visitor attention toward under-explored parks.
 
 #### 2. Park Recommendation System
-Wang et al. proposed a parks recommendation method based on content filtering using the Latent Dirichlet Allocation (LDA) model [2]. We aim to build on this by adding user preferences through a hybrid clustering algorithm. This approach helps identify similar parks while supporting a simple, questionnaire-style recommendation system.
+Wang et al. proposed a parks recommendation method based on content filtering using the Latent Dirichlet Allocation (LDA) model [2]. We aim to build on this by adding user preferences through a hybrid clustering algorithm. This approach allows the  identification of similar parks using a simple clustering recommendation system using static form input.
 
 ## Methods
 #### Data
