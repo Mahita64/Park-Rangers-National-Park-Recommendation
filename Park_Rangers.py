@@ -13,9 +13,8 @@ from sklearn.preprocessing import StandardScaler
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-parks_visit_df = pd.read_csv("/Users/mahitakandala/Desktop/IDS/final-project-s25-parkrangers/merged_weather_park_data.csv")
-airport_df = pd.read_csv('/Users/mahitakandala/Desktop/IDS/final-project-s25-parkrangers/parks_and_airports.csv')
-
+parks_visit_df = pd.read_csv("merged_weather_park_data.csv")
+airport_df = pd.read_csv('parks_and_airports.csv')
 
 st.header("🏞️ National Parks Visitation Analysis and Recommender System")
 st.markdown("A series of interactive dashboards to support exploration of the National Parks in the United States.")
