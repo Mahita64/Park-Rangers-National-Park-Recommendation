@@ -43,6 +43,43 @@ months = sorted(filtered_df["Month"].dropna().unique())
 
 selected_states = st.multiselect("Select State(s)", states, default=states[:3])
 
+map_df = filtered_df.dropna(subset=["Latitude", "Longitude"])
+map_df = map_df.rename(columns={"Latitude": "latitude", "Longitude": "longitude"})
+
+map_df = map_df[map_df["State_x"].isin(selected_states)]
+
+if not map_df.empty:
+    st.markdown("### 🗺️ Parks Map View with Hover Info")
+
+    st.pydeck_chart(pdk.Deck(
+        map_style='mapbox://styles/mapbox/outdoors-v11',
+        initial_view_state=pdk.ViewState(
+            latitude=map_df["latitude"].mean(),
+            longitude=map_df["longitude"].mean(),
+            zoom=4,
+            pitch=30,
+        ),
+        layers=[
+            pdk.Layer(
+                'ScatterplotLayer',
+                data=map_df,
+                get_position='[longitude, latitude]',
+                get_radius=40000,
+                get_fill_color='[0, 128, 255, 160]',
+                pickable=True,
+            )
+        ],
+        tooltip={
+            "html": "<b>{ParkName}</b><br/>Region: {Region}<br/>State: {State_x}<br/>Acres: {Acres}",
+            "style": {
+                "backgroundColor": "steelblue",
+                "color": "white"
+            }
+        }
+    ))
+else:
+    st.warning("No parks with valid coordinates to show on the map.")
+
 
 col1, col2 = st.columns(2)
 with col1:
@@ -77,40 +114,6 @@ if backcountry:
 
 filtered_df["Latitude"] = pd.to_numeric(filtered_df["Latitude"], errors="coerce")
 filtered_df["Longitude"] = pd.to_numeric(filtered_df["Longitude"], errors="coerce")
-
-map_df = filtered_df.dropna(subset=["Latitude", "Longitude"])
-map_df = map_df.rename(columns={"Latitude": "latitude", "Longitude": "longitude"})
-if not map_df.empty:
-    st.markdown("### 🗺️ Parks Map View with Hover Info")
-
-    st.pydeck_chart(pdk.Deck(
-        map_style='mapbox://styles/mapbox/outdoors-v11',
-        initial_view_state=pdk.ViewState(
-            latitude=map_df["latitude"].mean(),
-            longitude=map_df["longitude"].mean(),
-            zoom=4,
-            pitch=30,
-        ),
-        layers=[
-            pdk.Layer(
-                'ScatterplotLayer',
-                data=map_df,
-                get_position='[longitude, latitude]',
-                get_radius=40000,
-                get_fill_color='[0, 128, 255, 160]',
-                pickable=True,
-            )
-        ],
-        tooltip={
-            "html": "<b>{ParkName}</b><br/>Region: {Region}<br/>State: {State_x}<br/>Acres: {Acres}",
-            "style": {
-                "backgroundColor": "steelblue",
-                "color": "white"
-            }
-        }
-    ))
-else:
-    st.warning("No parks with valid coordinates to show on the map.")
 
 
 
