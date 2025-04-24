@@ -22,18 +22,9 @@ parks_visit_df = pd.read_csv(csv_url)
 
 merged_df = pd.merge(parks_visit_df, parks_geo_df, how='left', left_on='UnitCode', right_on='Park Code')
 
-
-# st.write(merged_df.head())
-
-# st.write(merged_df.columns)
-
-
-
 st.markdown("### 🎛️ Filter Parks by Your Preferences")
 
-
 filtered_df = merged_df.dropna(subset=["ParkName", "ParkType", "Region", "State_x", "Acres", "Latitude", "Longitude"])
-
 
 states = sorted(filtered_df["State_x"].dropna().unique())
 park_types = sorted(filtered_df["ParkType"].dropna().unique())
@@ -195,28 +186,3 @@ heatmap_fig = px.density_heatmap(
     labels={"RecreationVisits": "Visits"}
 )
 st.plotly_chart(heatmap_fig, use_container_width=True)
-
-
-
-# st.markdown("### 🏕️ Based on Preferred Activity")
-# top_parks_activity = (
-#     filtered_df.groupby("ParkName")["RecreationVisits"]
-#     .sum()
-#     .sort_values(ascending=False)
-#     .head(10)
-#     .reset_index()
-# )
-# fig = px.bar(
-#     top_parks_activity,
-#     x="RecreationVisits",
-#     y="ParkName",
-#     orientation="h",
-#     title="Top 10 Parks by Recreation Visits (Filtered by Activity)",
-#     labels={"RecreationVisits": "Visits", "ParkName": "Park"},
-#     color="ParkName",  
-#     color_discrete_sequence=px.colors.qualitative.Set3
-# )
-# fig.update_layout(showlegend=False)
-# st.plotly_chart(fig, use_container_width=True)
-
-

@@ -2,9 +2,12 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import warnings
+import warnings
+import plotly.express as px
+import pydeck as pdk
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
-st.title("Explore")
+st.title("Weather Information")
 st.markdown("Contains interactive dashboards to support exploration of the National Parks in the United States.")
 
 st.header("Exploring National Parks Weather")
