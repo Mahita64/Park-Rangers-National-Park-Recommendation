@@ -48,7 +48,9 @@ col1, col2 = st.columns(2)
 with col1:
     selected_years = st.select_slider("Select Year Range", options=years, value=(2015, 2023))
 with col2:
-    selected_months = st.multiselect("Select Month(s)", months, default=months)
+    selected_months = st.multiselect("Select Month(s)", months)
+    if not selected_months:
+        selected_months = months
 
 st.markdown("#### ⛺ Activity Preferences")
 camp_col1, camp_col2, camp_col3 = st.columns(3)
