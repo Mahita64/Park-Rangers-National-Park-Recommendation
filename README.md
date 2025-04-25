@@ -36,6 +36,7 @@ This project taught us the value of collaboration, communication, and team bondi
 
 ## Links
 
-### [Proposal](Proposal.md)
-### [Final Report](Report.md)
-### [Video](https://drive.google.com/file/d/1JbkVSzpqqGHfC3Mc_M_1BUze4MjxiZL_/view?usp=sharing)
+- [Proposal](Proposal.md)
+- [Paper](Report.md)
+- [Code](Park_Rangers.py)
+- [Video](https://drive.google.com/file/d/1JbkVSzpqqGHfC3Mc_M_1BUze4MjxiZL_/view?usp=sharing)
