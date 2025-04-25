@@ -34,9 +34,19 @@ To do this, we have integrated data from several sources - national park visitat
 
 This project taught us the value of collaboration, communication, and team bonding. We effectively resolved conflicts by listening and aligning on shared goals. Working together on data integration, visualization, and recommendations strengthened our teamwork. The experience not only enhanced our technical skills but also our ability to work cohesively as a unit.
 
+## Summary Image
+
+<p align="left">
+  <img src="images/Recommendations.png" alt="The Recommendations Based on User Responses"/>
+  <br>
+  <strong>The Recommendations Based on User Responses</strong>
+  <br>
+  <br>
+</p>
+
 ## Links
 
 - [Proposal](Proposal.md)
-- [Paper](Report.md)
-- [Code](Park_Rangers.py)
+- [Paper/Report](Report.md)
+- [Application/Webpage](Park_Rangers.py)
 - [Video](https://drive.google.com/file/d/1JbkVSzpqqGHfC3Mc_M_1BUze4MjxiZL_/view?usp=sharing)
