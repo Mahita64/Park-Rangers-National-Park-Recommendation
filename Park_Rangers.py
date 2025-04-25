@@ -25,10 +25,10 @@ st.subheader("🔍 Tell us about your ideal trip and get recommendations!")
 
 with st.form("recommendation_form"):
     st.markdown("### 🗓️ When do you want to visit?")
-    month = st.selectbox("Select a preferred month", ['Northeast', 'Pacific West', 'Southeast', 'Intermountain', 'Midwest', 'Alaska'])
+    month = st.selectbox("Preferred Region", ['Northeast', 'Pacific West', 'Southeast', 'Intermountain', 'Midwest', 'Alaska'])
     
     st.markdown("### 🗺️ Where would you like to go?")
-    region = st.selectbox("Preferred Region", ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
+    region = st.selectbox("Select a preferred month", ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
 
     
     st.markdown("### ⛺ What activities are you interested in?")
