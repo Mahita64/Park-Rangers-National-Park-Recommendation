@@ -36,7 +36,7 @@ Lastly, to determine the closest airport to each national park and provide suppo
 ##### Visualizations
 We developed our application using Streamlit, leveraging Altair and Plotly for creating interactive visualizations. For mapping, we utilized Pydeck, which enabled us to incorporate multiple layers—allowing distinct visual representations for each national park, nearby airports, and suggested travel paths. Each UI component was added using the streamlit’s components like multiselect, slider, select_slider etc. In this way, these libraries allowed us to create our dashboard. 
 ##### Clustering Algorithm
-//TODO
+To power our National Park Recommendation System, we performed clustering based on a combination of features derived from all three of our datasets: national park, airport, and weather. We aggregated and normalized visitation based columns (for example: RecreationalVisits column), average weather condition columns (for example: MinTemp, AvgTemp and MaxTemp columns), and distance to the nearest airport column. Using these features, we applied a clustering algorithm, K-Means clustering to group parks into similar clusters. These clusters were then ultimately utilized to find the top 5 recommendations for the users.
 
 ## Results
 The ParkRangers dashboard is designed as a go-to destination for anyone looking to explore U.S. national parks based on personal preferences. It presents a wide range of information, including weather conditions, visitor trends, seasonal popularity across temperature bands, nearest airports, and top park recommendations based on activity interests. 
