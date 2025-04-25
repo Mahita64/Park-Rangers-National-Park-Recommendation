@@ -1,10 +1,6 @@
 # Final Project Report
 
-**Video URL**: TODO
-
-US National Parks are rich areas of biodiversity conservation and tourism. However, some parks are more well-known, and receive greater visitation on average. Hence, there is a need to bridge the gap, and boost the visitation numbers of less-frequented parks. To address this, we have built an interactive Streamlit dashboard combining visitation analysis with a questionnaire-guided recommendation system. Our goals are to provide a unified portal to explore everything US National Parks-related. We facilitate park comparisons based on several metrics, enable users to easily locate nearby airports, offer weather trends and biodiversity information to aid in decision making. We also highlight overall trends to support policymakers. Lastly, we have incorporated a questionnaire-driven clustering algorithm, to help users find parks that align with their preferences.
-
-To do this, we have integrated data from several sources - national park visitation numbers, historical weather data, geospatial and airports-related information, as well as biodiversity data. We then used Altair and Plotly to present this data in an interactive and user-friendly format. We also built a simple K-Means clustering algorithm to help users find parks they will enjoy visiting. Future work includes social media sentiment analysis, dynamic clustering based on real-time weather, and incorporating socio-economic accessibility factors.
+**Video URL**: https://drive.google.com/file/d/1JbkVSzpqqGHfC3Mc_M_1BUze4MjxiZL_/view?usp=sharing
 
 
 ## Introduction
