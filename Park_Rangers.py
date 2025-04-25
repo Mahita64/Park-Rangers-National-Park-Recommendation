@@ -24,7 +24,6 @@ st.markdown("---")
 st.subheader("🔍 Tell us about your ideal trip and get recommendations!")
 
 with st.form("recommendation_form"):
-    # ===================================================================================================
     st.markdown("### 🗓️ When do you want to visit?")
     month = st.selectbox("Select a preferred month", ['Northeast', 'Pacific West', 'Southeast', 'Intermountain', 'Midwest', 'Alaska'])
     
@@ -57,7 +56,7 @@ with st.form("recommendation_form"):
     submitted = st.form_submit_button("Get Park Suggestions")
 
 if submitted:
-    # Merge datasets
+    
     merged_df = pd.merge(
         parks_visit_df,
         airport_df[['Park Code', 'nearest_airport_name', 'airport_lat', 'airport_lon', 'airport_state', 'distance_km']],
@@ -65,24 +64,23 @@ if submitted:
         how='left'
     )
 
+    
     columns_to_keep = [
-        'UnitCode', 'ParkType', 'Region', 'Year', 'Month', 
-        'RecreationVisits', 'NonRecreationVisits', 'TentCampers', 'RVCampers', 'Backcountry',
-        'Park Code', 'Park Name', 'State', 'Acres', 'Latitude', 'Longitude',
-        'AvgTemp', 'MinTemp', 'MaxTemp', 'Precipitation', 'Snowfall', 'WindSpeed', 'Pressure', 'Sunshine',
+        'UnitCode', 'ParkType', 'Region', 'Year', 'Month', 'RecreationVisits', 'NonRecreationVisits', 'TentCampers', 'RVCampers', 'Backcountry',
+        'Park Code', 'Park Name', 'State', 'Acres', 'Latitude', 'Longitude', 'AvgTemp', 'MinTemp', 'MaxTemp', 'Precipitation', 'Snowfall', 'WindSpeed', 'Pressure', 'Sunshine',
         'nearest_airport_name', 'airport_lat', 'airport_lon', 'airport_state', 'distance_km'
     ]
-
     df = merged_df[columns_to_keep]
 
     month_map = {
-        "January": 1, "February": 2, "March": 3, "April": 4,
-        "May": 5, "June": 6, "July": 7, "August": 8,
+        "January": 1, "February": 2, "March": 3, "April": 4, "May": 5, "June": 6, "July": 7, "August": 8,
         "September": 9, "October": 10, "November": 11, "December": 12
     }
 
 
-    # Define category mappings
+
+    
+    # CATEGORIES TO THE ACTUAL VALUE
     temp_preference_map = {
         "Doesn't matter": None,  
         "❄️ Very Cold": -5,
@@ -106,16 +104,15 @@ if submitted:
         "🏞️ Okay with remote travel": 200
     }
 
-    # Data preparation
+
+    # =============================================================================================
+    # DATA PREPROCESSING
     df = df[df['Year'] >= 2010].copy()
 
-    numeric_cols = [
-        'RecreationVisits', 'TentCampers', 'RVCampers', 'Backcountry',
-        'AvgTemp', 'Precipitation', 'Snowfall', 'WindSpeed', 'distance_km'
-    ]
+    numeric_cols = ['RecreationVisits', 'TentCampers', 'RVCampers', 'Backcountry', 'AvgTemp', 'Precipitation', 'Snowfall', 'WindSpeed', 'distance_km']
+    
     df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors='coerce')
 
-    # Aggregate data by park
     agg_df = df.groupby('Park Name').agg({
         'RecreationVisits': 'mean',
         'TentCampers': 'mean',
@@ -132,32 +129,33 @@ if submitted:
         'State': 'first'
     }).reset_index()
 
-    # Create monthly visitation profiles
+    
+    # MAKING THE MONTH ROWS INTO COLUMNS
     monthly = df.groupby(['Park Name', 'Month'])['RecreationVisits'].mean().reset_index()
+    
     monthly_pivot = monthly.pivot(index='Park Name', columns='Month', values='RecreationVisits').fillna(0)
-
     month_map = {
-        1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun',
-        7: 'Jul', 8: 'Aug', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec'
+        1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun', 7: 'Jul', 8: 'Aug', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec'
     }
+    
     monthly_pivot.columns = [month_map[m] for m in monthly_pivot.columns]
-
-    # Normalize to get percentage of annual visits per month
     monthly_pivot = monthly_pivot.div(monthly_pivot.sum(axis=1), axis=0).fillna(0)
 
-    # Merge all features
+    
+    # GETTING ALL THE DATA TOGETHER
     features_df = agg_df.merge(monthly_pivot, left_on='Park Name', right_index=True)
 
-    # Create camping flags
+
+    
+    # CREATING FLAGS FOR SOME OF THE COLUMNS BASED ON THRESHOLDING
     features_df['TentCampers_flag'] = (features_df['TentCampers'] > 1000).astype(int)
     features_df['RVCampers_flag'] = (features_df['RVCampers'] > 1000).astype(int)
     features_df['Backcountry_flag'] = (features_df['Backcountry'] > 1000).astype(int)
 
-    # Prepare features for clustering - IMPORTANT: exclude string columns like 'Region'
-    X = features_df.drop(columns=['Park Name', 'RecreationVisits', 'TentCampers', 'RVCampers',
-                                'Backcountry', 'Snowfall', 'WindSpeed', 'Latitude', 'Longitude', 'State', 'Region']).copy()
+    X = features_df.drop(columns=['Park Name', 'RecreationVisits', 'TentCampers', 'RVCampers','Backcountry', 'Snowfall', 'WindSpeed', 'Latitude', 'Longitude', 'State', 'Region']).copy()
 
-    # Functions for categorization
+    
+    # CATEGORIZATION OF DATASET 
     def categorize_temp(temp):
         if pd.isna(temp):
             return "Unknown"
@@ -192,24 +190,21 @@ if submitted:
         else:
             return "🏞️ Okay with remote travel"
 
-    # Function to find nearest parks
-    def find_nearest_parks(user_features, park_features, all_parks_df, n=5):
-        """Find the n nearest parks to user preferences based on Euclidean distance"""
-        distances = []
         
-        # Calculate Euclidean distance between user preferences and each park
-        for i, park_feature in enumerate(park_features[:-1]):  # Exclude the user
+    # GET TOP 5 PARKS FROM THE CLUSTERS
+    def find_nearest_parks(user_features, park_features, all_parks_df, n=5):
+        distances = []
+        for i, park_feature in enumerate(park_features[:-1]): 
             distance = np.linalg.norm(park_feature - user_features)
             distances.append((i, distance))
-        
-        # Sort by distance
         distances.sort(key=lambda x: x[1])
-        
-        # Return the nearest parks dataframe
         nearest_indices = [idx for idx, _ in distances[:n]]
         return all_parks_df.iloc[nearest_indices].copy()
 
-    # Create user preference data with only the numerical/flag columns (no Region)
+
+
+
+    # THE USER DATA 
     user_data = {
         'Jan': 1 if month == 'Jan' else 0,
         'Feb': 1 if month == 'Feb' else 0,
@@ -230,8 +225,6 @@ if submitted:
         'RVCampers_flag': 1 if 'RVCampers' in activities else 0,
         'Backcountry_flag': 1 if 'Backcountry' in activities else 0
     }
-
-    # Handle "Doesn't matter" preferences
     if user_data['AvgTemp'] is None:
         user_data['AvgTemp'] = X['AvgTemp'].median()
         
@@ -240,11 +233,9 @@ if submitted:
         
     if user_data['distance_km'] is None:
         user_data['distance_km'] = X['distance_km'].median()
-
-    # Create user DataFrame
+        
     user_df = pd.DataFrame([user_data])
-
-    # Ensure we're using the same columns for user data as for park data
+    
     user_clustering_features = pd.DataFrame()
     for col in X.columns:
         if col in user_df.columns:
@@ -252,40 +243,36 @@ if submitted:
         else:
             user_clustering_features[col] = X[col].median()
 
-    # Combine for scaling
-    combined_features = pd.concat([X, user_clustering_features], ignore_index=True)
 
-    # Fill missing values
+    
+    # PREPROCESSING BEFORE SCALING
+    combined_features = pd.concat([X, user_clustering_features], ignore_index=True)
     numeric_cols = combined_features.select_dtypes(include=['float64', 'int64']).columns
     combined_features[numeric_cols] = combined_features[numeric_cols].fillna(combined_features[numeric_cols].median())
 
-    # Scale data for clustering
+    
+    # SCALING
     scaler = StandardScaler()
     features_scaled = scaler.fit_transform(combined_features)
 
-    # Apply clustering
-    k = 10  # Number of clusters
+    
+    # CLUSTERING ALGORITHM
+    k = 10  
     kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
     labels = kmeans.fit_predict(features_scaled)
-
-    # Assign clusters
-    features_df['Cluster'] = labels[:-1]  # All except the last one (user)
+    features_df['Cluster'] = labels[:-1]  
     user_cluster = labels[-1]
-
-    # Find nearest parks based on Euclidean distance
-    user_features = features_scaled[-1]  # Get the user feature vector
+    user_features = features_scaled[-1]
     nearest_parks = find_nearest_parks(user_features, features_scaled, features_df, n=5)
 
 
 
-
-    # Display the nearest parks on a map
+    # ==============================================================
+    # DISPLAY THE MAP
     st.subheader("🗺️ Map of Your Best Matching Parks")
-
-    # Check if we have geographic coordinates
     if not nearest_parks.empty and not nearest_parks['Latitude'].isna().any():
         park_locations = nearest_parks[['Park Name', 'Latitude', 'Longitude', 'State']].copy()
-        park_locations['size'] = 75000  # Consistent marker size
+        park_locations['size'] = 75000
         
         view_state = pdk.ViewState(
             latitude=park_locations["Latitude"].mean(),
@@ -317,13 +304,15 @@ if submitted:
             layers=[layer],
             tooltip=tooltip
         ))
+        
     else:
         st.warning("Location data not available for the recommended parks.")
 
-    # Show detailed information about each recommended park
+
+
+    # PARK DETAILED INFORMATION 
     st.subheader("📋 Detailed Park Information")
 
-    # For each of the nearest parks, show more details
     for i, (idx, park) in enumerate(nearest_parks.iterrows()):
         with st.expander(f"{i+1}. {park['Park Name']} ({park['State']})"):
             col1, col2 = st.columns(2)
@@ -331,36 +320,31 @@ if submitted:
             with col1:
                 st.markdown(f"**Region:** {park['Region']}")
                 
-                # Show temperature info
                 temp_category = categorize_temp(park['AvgTemp'])
                 st.markdown(f"**Temperature:** {temp_category} ({park['AvgTemp']:.1f}°C)")
                 
-                # Show precipitation info
                 precip_category = categorize_precip(park['Precipitation'])
                 st.markdown(f"**Precipitation:** {precip_category} ({park['Precipitation']:.1f} mm)")
             
             
             with col2:
-                # Show best months
                 month_values = [park[m] for m in month_map.values()]
                 best_month_idx = np.argmax(month_values)
                 best_month = list(month_map.values())[best_month_idx]
                 
                 st.markdown(f"**Best month to visit:** {best_month}")
                 
-                # Show camping options
                 camping_options = []
                 if park['TentCampers_flag'] == 1:
                     camping_options.append("⛺ Tent Camping")
+                    
                 if park['RVCampers_flag'] == 1:
                     camping_options.append("🚐 RV Camping")
+                    
                 if park['Backcountry_flag'] == 1:
                     camping_options.append("🥾 Backcountry")
                     
                 st.markdown(f"**Available activities:** {', '.join(camping_options) if camping_options else 'Limited camping options'}")
-                
-                # Show recreation visits
                 st.markdown(f"**Average annual visits:** {park['RecreationVisits']:,.0f}")
-                        # Show distance info
                 distance_category = categorize_distance(park['distance_km'])
             st.markdown(f"**Distance from airport:** {distance_category} ({park['distance_km']:.1f} km)")
