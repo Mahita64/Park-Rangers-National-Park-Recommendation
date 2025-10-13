@@ -1,11 +1,5 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/z4O17nG5)
-# IDS Final Project: National Park Visitation Analysis & Recommender System
 
-* **Team members**:
-  * Contact person: aditisai@andrew.cmu.edu
-  * aangadi@andrew.cmu.edu
-  * mkandala@andrew.cmu.edu
-  * rupsad@andrew.cmu.edu
+# National Park Visitation Analysis & Recommender System
 
 ## Work distribution
 
@@ -46,7 +40,5 @@ This project taught us the value of collaboration, communication, and team bondi
 
 ## Links
 
-- [Proposal](Proposal.md)
-- [Paper/Report](Report.md)
 - [Application/Webpage](Park_Rangers.py)
 - [Video](https://drive.google.com/file/d/1JbkVSzpqqGHfC3Mc_M_1BUze4MjxiZL_/view?usp=sharing)
