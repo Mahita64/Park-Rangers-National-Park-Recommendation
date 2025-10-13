@@ -1,12 +1,6 @@
 
 # National Park Visitation Analysis & Recommender System
 
-## Work distribution
-
-1. Exploratory Data Analysis & Map Visualizations: Aditi Saini
-2. Interactive Visualizations & Recommendation UI: Rupsa Dhar
-3. Weather Data Integration and Visualizations: Ananya Prabhu Angadi
-4. Clustering & Recommendation System: Mahita Kandala
 
 ## Instructions to run locally
 
