@@ -29,9 +29,11 @@ The National Park Clustering workflow is implemented in Park_Rangers.py, where y
   <br>
 </p>
 
+## Links
+You can view the demo video below to see the project in action.
+- [Demo Video](https://drive.google.com/file/d/1JbkVSzpqqGHfC3Mc_M_1BUze4MjxiZL_/view?usp=sharing)
+
+
 ## Project Process
 
 This project taught us the value of collaboration, communication, and team bonding. We effectively resolved conflicts by listening and aligning on shared goals. Working together on data integration, visualization, and recommendations strengthened our teamwork. The experience not only enhanced our technical skills but also our ability to work cohesively as a unit.
-
-## Links
-- [Demo Video](https://drive.google.com/file/d/1JbkVSzpqqGHfC3Mc_M_1BUze4MjxiZL_/view?usp=sharing)
