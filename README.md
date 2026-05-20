@@ -28,6 +28,7 @@ The National Park Clustering workflow is implemented in Park_Rangers.py, where y
   <br>
   <br>
 </p>
+
 ## Project Process
 
 This project taught us the value of collaboration, communication, and team bonding. We effectively resolved conflicts by listening and aligning on shared goals. Working together on data integration, visualization, and recommendations strengthened our teamwork. The experience not only enhanced our technical skills but also our ability to work cohesively as a unit.
