@@ -18,11 +18,9 @@ US National Parks are rich areas of biodiversity conservation and tourism. Howev
 
 To do this, we have integrated data from several sources - national park visitation numbers, historical weather data, geospatial and airports-related information, as well as biodiversity data. We then used Altair and Plotly to present this data in an interactive and user-friendly format. We also built a simple K-Means clustering algorithm to help users find parks they will enjoy visiting. Future work includes social media sentiment analysis, dynamic clustering based on real-time weather, and incorporating socio-economic accessibility factors.
 
-## Project Process
-
-This project taught us the value of collaboration, communication, and team bonding. We effectively resolved conflicts by listening and aligning on shared goals. Working together on data integration, visualization, and recommendations strengthened our teamwork. The experience not only enhanced our technical skills but also our ability to work cohesively as a unit.
-
 ## Summary Image
+The National Park Clustering workflow is implemented in Park_Rangers.py, where you can view the clustering logic, feature processing, and related visualizations.
+
 <p align="left">
   <img src="images/1.png" alt="The Recommendations Based on User Responses"/>
   <br>
@@ -30,9 +28,9 @@ This project taught us the value of collaboration, communication, and team bondi
   <br>
   <br>
 </p>
+## Project Process
 
+This project taught us the value of collaboration, communication, and team bonding. We effectively resolved conflicts by listening and aligning on shared goals. Working together on data integration, visualization, and recommendations strengthened our teamwork. The experience not only enhanced our technical skills but also our ability to work cohesively as a unit.
 
 ## Links
-
-- [Application/Webpage](Park_Rangers.py)
 - [Video](https://drive.google.com/file/d/1JbkVSzpqqGHfC3Mc_M_1BUze4MjxiZL_/view?usp=sharing)
